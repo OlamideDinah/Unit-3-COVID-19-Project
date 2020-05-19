@@ -1,0 +1,95 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Bootstrap Example</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+</head>
+
+  <nav class="navbar navbar-expand-sm  sticky-top bg-light"> <!-- they chunk un top when screen is small!-->
+    <ul class="navbar-nav"> <!-- <!-->
+      <li class="nav-item">
+        <a class="nav-link bg-light text-success" href="#">Home</a><!-- <!-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bg-light text-dark" href="#">About Us</a><!-- <!-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bg-light text-dark" href="#">Survey</a>
+      </li>
+    </ul>
+  </nav> <!-- <!-->
+
+</div>
+    <div>
+      <img src="title.png" alt="" class="img-responsive"  width="100%" height="100%" > <!-- <!-->
+        <div class="title w-25 h-10 text-center" > <!-- <!-->
+        Food Topia
+      </div>
+      <img src="second.png" alt="" class="img-responsive" width="100%" height="100%">
+      <img src="third.png" alt="" class="img-responsive" width="100%" height="100%"> <!-- <!-->
+        <div class="md-form active-cyan active-cyan-2 mb-3">
+          <input class="form-control search w-50 input-mysize"id="listSearch" type="text" placeholder="What would you like?" aria-label="Search"> <!-- search !-->
+
+          <div class="card card1" style="width: 18rem;"> <!-- <!-->
+          <img class="card-img-top" src="chicken.jpg" alt="Card image cap">
+            <div class="card-body"> <!-- <!-->
+              <h5 class="card-title">Chicken</h5>
+                <p class="card-text">Yum.</p> <!-- <!-->
+                  <a href=# class="btn btn-primary" onclick="ChickenSite();">Explore Now</a>
+                </div>
+              </div> <!-- <!-->
+
+              <div class="card card2" style="width: 18rem;">
+              <img class="card-img-top" src="costefficient.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Cost-Efficient</h5>
+                    <p class="card-text">On a budget? Try healthy meals for less</p>
+                      <a href="#" class="btn btn-primary">Explore Now</a>
+                    </div>
+                  </div>
+                  <div class="card card3" style="width: 18rem;"> <!-- rem is a reference to font size !-->
+                  <img class="card-img-top" src="vegetarian.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Vegetarian</h5>
+                        <p class="card-text">Healthy, and delicious</p>
+                          <a href="#" class="btn btn-primary">Explore Now</a>
+                        </div>
+                      </div>
+
+
+
+
+      <script>
+
+    var chickensites = [ // defining the sites that are going to be accessible from this
+        'chicken.html', // array
+        'http://www.stackoverflow.com', // array
+        'http://www.example.com', // array
+
+    ]; // syntax
+
+    function ChickenSite() { // when this is called
+        var i = parseInt(Math.random() * chickensites.length); // i equals a random number from the lengths of 'sites'
+        location.href = chickensites[i]; // ie 2 or 3. then you're taken to that site
+    }
+
+// remmeber each food shood have a random butotn also
+//<a href="#" onclick="randomSite();">Random</a>
+
+
+      // code to check the input, see if its equal to any predefined values, and print out that value if it is.
+      // make search bar work for chicken cost-efficient and vegetarian.
+      // make tempates of 3 food types so 3 different website for each and your randomly taken to one of those 3 sites onclick
+    //  function search_animal() {
+  //  let input = document.getElementById('searchbar').value
+
+    </script>
+
+  </body>
+</html>

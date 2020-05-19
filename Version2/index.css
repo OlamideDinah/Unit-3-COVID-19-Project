@@ -1,0 +1,71 @@
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) {
+             border-bottom: 1px solid #4dd0e1;
+             box-shadow: 0 1px 0 0 #4dd0e1;
+
+           }/* */
+           .active-cyan input.form-control[type=text] {
+           }
+
+.img-responsive { /* */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+             /* The image used */
+
+
+
+.navbar{/* */
+  font-family: 'Open Sans', sans-serif;
+}
+.half{
+height:40%;
+}
+
+
+.title{/* */
+animation-name:title;
+animation-duration: 3s;
+position:absolute;
+top:50%;
+left:36.5%;
+width:25%;
+height:10%;
+font-family: 'Open Sans', sans-serif;
+font-size:60px;
+color:black;
+border:black 1px;
+}
+
+@keyframes title {/* */
+0%   {top:10%; left:15%;}
+25%  {top:30%; left:15%;}
+50%  {top:30%; left:36.5%;}
+75%  {top:20%; left:36.5%;}
+100% {top:50%; left:36.5%;}
+}
+
+.input-mysize  {
+  position:absolute!important;
+  top:150%;
+  left:5%;
+  margin:auto; /* */
+}
+
+.card1 {/* */
+  position:absolute!important;
+  left:10%;
+  top:250%;
+}
+.card2 {/* */
+  position:absolute!important;
+  left:40%;
+  top:250%;
+}
+
+.card3 {
+  position:absolute!important;
+  left:70%;
+  top:250%;
+}
+
+/* find a way to assign javascript to each recipe, and then if one reipe is randomly picked - if x = true, then fill in the content of boxes with something.

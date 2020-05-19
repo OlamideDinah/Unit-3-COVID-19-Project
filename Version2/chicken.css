@@ -1,0 +1,64 @@
+.jumbotron {
+ background-image:url('paint.jpg');
+}
+
+
+
+
+.jumbotron > div { /* When a div is a child of a jumobtron, it will have these specifications. */
+  font-size:50px;
+  color:black;
+}
+
+
+
+.blue-gradient {
+  background: linear-gradient(to right, #6a3093, #a044ff);
+  height:80px;
+  width:125px;
+  border-radius:5%!important;
+}
+
+.bg-custom { /* settin background colour for elements in middle of page */
+  background: linear-gradient(to right, #2193b0, #6dd5ed,#2193b0 );
+  opacity:1;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+
+}
+
+.b-pad { /* padding for the "switch button" */
+    padding-bottom:10px!important;
+}
+
+.button-mt { /* button margin top */
+  margin-top: 15% !important;
+}
+
+
+
+
+.carousel-container {  /* countainer for my image carousel */
+  overflow:hidden;
+}
+
+.carousel-slide{ /*  image slideshow */
+  display:flex;
+}
+
+.width {
+  width:100%!important;
+}
+.hidden {
+  width:100%!important;
+}
+
+/* for recipes 2 for each. one is normal, one is vegan,
+
+/* add copy recipe feature ! and also maybe an automatic link that orders the stuff from ie longos shipping for groceries.
+
+
+/*  3 columns, 1 is recipe. other is graph. final is nutrition facts and one below is bannder
+that has a photo of a gu swimming. it says, you would have to swim for (time) to burn off this amount of calories.*/
