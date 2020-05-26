@@ -57,7 +57,7 @@
 
 .run-container{ /* container for text at bottom of page */
   position: absolute; /* will be exactly where I position it */
-  top:120%;
+  top:130%;
   margin: 0 auto;
   text-align: center; /*text is centered */
   width: 100%; /* Set the width of the positioned div */
@@ -65,7 +65,7 @@
 
 
 .run-text { /* text at the bottom of the page*/
-  top:115%;
+  top:125%;
   position:absolute; /*exactly where I position it */
   width:100%;
   font-size:30px;

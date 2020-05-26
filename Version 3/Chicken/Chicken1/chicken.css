@@ -56,7 +56,7 @@
 
 .run-container{ /* This is the code for the container of the text in the bottom image */
   position: absolute;
-  top:120%;
+  top:130%;
   margin: 0 auto;
   bottom: 20%; /* Adjust this value to move the positioned div up and down */
   text-align: center;
@@ -65,13 +65,13 @@
 
 
 .run-text { /* This is the code for the text itself*/
-  top:115%;
+  top:125%;
   position:absolute;
   width:100%;
   font-size:30px;
 }
 
-@media only screen and (max-width: 750px) { /* This is for the text and its container to not display on small screens*/
+@media only screen and (max-width: 600px) { /* This is for the text and its container to not display on small screens*/
   .run-text {
     display:none;
   }
@@ -80,7 +80,7 @@
   }
 }
 
-@media only screen and (max-height: 750px) { /* This is for the text and its container to not display on small screens*/
+@media only screen and (max-height: 600px) { /* This is for the text and its container to not display on small screens*/
   .run-text {
     display:none;
   }
