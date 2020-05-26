@@ -1,0 +1,90 @@
+.jumbotron {/* The background for the jumbotron is this image */
+ background-image:url('Photos/paint.jpg');
+}
+
+
+.jumbotron > div { /* When a div is a child of a jumobtron, it will have these specifications. */
+  font-size:50px;
+  color:black;
+}
+
+
+
+.blue-gradient { /* anything with class blue gradient - (the buttons) - will look like this */
+  background: linear-gradient(to right, #6a3093, #a044ff);
+  height:80px;
+  width:125px;
+  border-radius:5%!important;
+}
+
+.bg-custom { /* settin background colour for elements in middle of page */
+  background-image: linear-gradient(215deg, #70b2d9 0%, #ADD8E6, #ADD8E6 94%, #ADD8E6 0%); /* means that it will cover 74percent which leaves a cool triangle design */
+  opacity:1; /* degress determines where gradient starts ie angle, percentage determines what percentage of that layer the colour takes*/
+}
+
+.mb-0 { /* no  bottom margin */
+  margin-bottom: 0 !important;
+}
+
+.b-pad { /* padding for the "switch button" */
+    padding-bottom:10px!important;
+}
+
+.button-mt { /* button margin top */
+  margin-top: 15% !important;
+}
+
+
+
+
+.carousel-container {  /* countainer for my image carousel */
+  overflow:hidden;
+
+}
+
+.carousel-slide{ /*  image slideshow */
+  display:flex;
+
+}
+
+
+.hidden { /* this is the class for the image at the bottom of the page */
+  width:100%!important;
+  margin-top:20px!important;
+}
+
+
+.run-container{ /* This is the code for the container of the text in the bottom image */
+  position: absolute;
+  top:120%;
+  margin: 0 auto;
+  bottom: 20%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 100%; /* Set the width of the positioned div */
+  }
+
+
+.run-text { /* This is the code for the text itself*/
+  top:115%;
+  position:absolute;
+  width:100%;
+  font-size:30px;
+}
+
+@media only screen and (max-width: 750px) { /* This is for the text and its container to not display on small screens*/
+  .run-text {
+    display:none;
+  }
+  .run-container {
+    display:none;
+  }
+}
+
+@media only screen and (max-height: 750px) { /* This is for the text and its container to not display on small screens*/
+  .run-text {
+    display:none;
+  }
+  .run-container {
+    display:none;
+  }
+}

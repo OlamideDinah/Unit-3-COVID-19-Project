@@ -1,0 +1,175 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="cost3.css"> <!-- Here Im importing everything im going to need from bootrstrap to fonts!-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>Bootstrap Example</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/cb55dcd543.js" crossorigin="anonymous"></script>  <!-- buttons and donate icon !-->
+</head>
+
+
+<nav class="navbar navbar-expand-sm bg-light justify-content-between"> <!-- they chunk un top when screen is small!-->
+  <ul class="navbar-nav"> <!-- This is the navbar !-->
+    <li class="nav-item">
+      <a class="nav-link bg-light text-success" href="../../index.html">Home</a><!-- Heres the first navbar item .. relative file paths!-->
+    </li>
+    <li class="nav-item">
+      <a class="nav-link bg-light text-dark" href="../../about.html">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link bg-light text-dark" href="../../survey.html">Survey</a>
+    </li>
+  </ul>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="listSearch">
+  </form>
+</nav> <!-- <!-->
+
+  <body>
+    <div class="jumbotron no-padding text-center mb-0 title"> <!--This jumbotron class is for the big banner you first see on each recipe page !-->
+    <div class="col-12 mb-0">
+      <p class = "text-center">Black Pepper Pork </p>
+    </div>
+    <button class="btn blue-gradient mb-0 b-pad" onclick=CostSite();>Switch!</button> <!-- When this button is clicked, you are taken to a new website relating to the chosen food type !-->
+</div>
+
+<div class="container-fluid"> <!-- container fluid speciifes that they will span over the pages full width vs container which is chosen !-->
+  <div class="row h-50">
+    <div class="col-sm-12 col-lg-4 bg-custom text-center "> <!--Inside of this div are the buttons for both recipes, along with the copy ingredients command recipe = normal recipe vegan = vegan copy = copy ingredients!-->
+      <a href =# onclick = "Recipe();"> <button class= "btn blue-gradient w-75 button-mt "><h2> Normal Recipe!</h2> </button> </a> <!-- Calling our function Recipe !-->
+      <input type="text" value="
+      1 (1-pound) pork tenderloin
+      3 Tablespoons low-sodium soy sauce
+      1 Tablespoon cornstarch
+      1 Tablespoon freshly ground black pepper
+      3 Tablespoons vegetable oil, divided
+      1 pound asparagus, cut into 1-inch pieces
+      Sliced scallions, for garnishing
+      Toasted sesame seeds, for garnishing"
+      id="Input" class ="w-25">
+      <button onclick="Copy()" class = "btn bg-light">Copy Ingredients</button>
+      <a href =# onclick = "Vegan();"> <button class= "btn blue-gradient w-75 button-mt"><h2> Vegan Recipe!</h2> </button> </a> <!-- Calling our function Vegan !-->
+    </div>
+    <div class="col-sm-12 col-lg-4 bg-custom chart-pie "> <!-- when small screen each one tkaes up 4 spans etc !--> <!-- In this div, the piechart is housed!-->
+        <canvas id="myPieChart"></canvas>
+    </div>
+    <div class="col-sm-12 col-lg-4 bg-custom carousel-container text-center">
+              <img src=Photos/CostA1.png alt=""> <!-- alt is for when image isn't displayed !--> <!-- IN this div, the image(s) are displayed !-->
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class = "run-text text-center"> <!-- this houses the text for the image below!-->
+    You would have to run 2.67 miles to burn off these calories!
+  </div>
+
+<image src = "Photos/water.jpg" class="hidden">
+
+
+
+<script>
+function Recipe() { // when called
+  location.href = 'https://www.justataste.com/quick-black-pepper-pork-recipe/' //you're taken to ths website
+}
+
+
+function Vegan() {
+  location.href = 'https://www.planted365.com/2018/12/17/vegan-pork-tenderloin/'
+}
+</script>
+
+<script>
+const listinput = document.getElementById('listSearch') // defining the list input as whatever is typed in the search bar
+listinput.addEventListener('input',(event) => { // if anything, anything at all happens in the search bar text
+ var value = event.target.value // then value is equal to whatever is inside the box
+ check() // running my check function
+
+
+function check() { // defining fuction
+if (value.toLowerCase() == 'chicken') { // all inputs automatically lower case // checking if equal to pre-specified value
+  location.href = '../../Chicken/Chicken1/chicken.html' // taken to a chicken page
+}
+else if (value.toLowerCase() == 'time' ) { // if the value equals this - do this
+  location.href = '../../Time/Time1/time.html' // taken to a cost page
+}
+}
+});
+</script>
+
+<script>
+var costsites = [ // defining the sites that are going to be accessible from this
+    '../Cost1/cost.html', // array
+    '../Cost2/cost2.html', // array
+
+]; // syntax
+
+function CostSite() { // when this is called
+    var i = parseInt(Math.random() * costsites.length); // i equals a random number from the lengths of 'sites'
+    location.href = costsites[i]; // ie 2 or 3. then you're taken to that site
+}
+</script>
+
+<script>
+function Copy() {
+  var copy = document.getElementById("Input"); // choosing what text will be copied
+  copy.select(); // selecting
+  copy.setSelectionRange(0, 99999)// setting the selection region
+  document.execCommand("copy"); // copying
+  alert("Copied"); // alerting the user its done
+}
+</script>
+
+
+<script>
+Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+Chart.defaults.global.defaultFontColor = '#858796';
+
+// Pie Chart Example
+var ctx = document.getElementById("myPieChart");
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ["Protein Percentage of Calories", "Fat Percentage of Calories", "Carbs Percentage of Calories"],
+    datasets: [{
+      data: [9.7, 5.2, 3],
+      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
+      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      hoverBorderColor: "rgba(234, 236, 244, 1)",
+    }],
+  },
+  options: {
+  //  title: {
+          // display: true,
+        //   text: 'Custom Chart Title',
+    maintainAspectRatio: false,
+    tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      caretPadding: 10,
+    },
+    legend: {
+      display: false
+    },
+    cutoutPercentage: 60,
+   //}
+  },
+});
+
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,65 @@
+.active-cyan-2 input.form-control[type=text]:focus:not([readonly]) { /* This is the for my searchbar*/
+  border-bottom: 1px solid #4dd0e1;
+  box-shadow: 0 1px 0 0 #4dd0e1;
+}
+
+
+.img-responsive { /* This class is for background images insuring they don't repeat and fully cover the page */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.navbar{/*  Specifying the font in the navbar*/
+  font-family: 'Open Sans', sans-serif;
+}
+.half{   /* Anything with class half has a height of 40% */
+height:40%;
+}
+
+
+.title{/* This is the CSS styling for the text in the title animation */
+animation-name:title;
+animation-duration: 3s;
+position:absolute;
+top:50%;
+left:36.5%;
+width:25%;
+height:10%;
+font-family: 'Open Sans', sans-serif;
+font-size:60px;
+color:black;
+border:black 1px;
+}
+
+@keyframes title {/* Here the actual animation itself */
+0%   {top:10%; left:15%;} /*At different stages its position changes */
+25%  {top:30%; left:15%;}
+50%  {top:30%; left:36.5%;}
+75%  {top:20%; left:36.5%;}
+100% {top:50%; left:36.5%;}
+}
+
+.input-mysize  { /* for searchbar */
+  position:absolute!important; /* this certifies that what I say will occur (!important) */
+  top:150%;
+  left:5%;
+  margin:auto; /* margin is automatic */
+}
+
+.card1 {/*  For the first card*/
+  position:absolute!important;
+  left:7.5%;
+  top:250%;
+}
+.card2 {/*  For the second card*/
+  position:absolute!important;
+  left:37.5%;
+  top:250%;
+}
+
+.card3 { /*  For the final card*/
+  position:absolute!important;
+  left:67.5%;
+  top:250%;
+}
